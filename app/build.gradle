@@ -1,39 +1,67 @@
+// ========================================
+// Сборка модуля приложения (app/build.gradle)
+// ========================================
+//
+// Этот файл описывает настройки сборки для модуля app.
+// Gradle использует его при вызове ./gradlew build.
+// ========================================
+
+// Подключаемые плагины:
+//   com.android.application — сборка Android-приложения
+//   org.jetbrains.kotlin.android — поддержка Kotlin
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
 }
 
+// Настройки Android-сборки
 android {
+    // Уникальное пространство имён (пакет приложения)
     namespace 'com.titan2.russiankeyboard'
+    // Версия Android SDK, против которой компилируется приложение
     compileSdk 34
 
+    // Стандартная конфигурация сборки
     defaultConfig {
+        // Уникальный идентификатор приложения (publish в Google Play)
         applicationId "com.titan2.russiankeyboard"
+        // Минимальная версия Android (API 29 = Android 10)
         minSdk 29
+        // Целевая версия Android (оптимизация под Android 14)
         targetSdk 34
+        // Внутренний номер версии (увеличивается при каждом релизе)
         versionCode 1
+        // Видимое имя версии
         versionName "1.0"
     }
 
+    // Настройки типов сборки (debug / release)
     buildTypes {
         release {
+            // minifyEnabled = false — отключение обфускации (ProGuard)
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
-    
+
+    // Версия Java для компиляции
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_21
         targetCompatibility JavaVersion.VERSION_21
     }
-    
+
+    // Версия JVM для Kotlin-кода
     kotlinOptions {
         jvmTarget = '21'
     }
 }
 
+// Зависимости проекта (библиотеки)
 dependencies {
+    // androidx.core — базовые утилиты Kotlin для Android
     implementation 'androidx.core:core-ktx:1.12.0'
+    // androidx.appcompat — обратная совместимость (AppCompatActivity)
     implementation 'androidx.appcompat:appcompat:1.6.1'
+    // Material Design — компоненты UI (темы, виджеты)
     implementation 'com.google.android.material:material:1.11.0'
 }

@@ -1,28 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--
+    AndroidManifest.xml — главный конфигурационный файл приложения.
+    Описывает компоненты приложения, разрешения и мета-данные.
+-->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
+    <!-- application — настройки всего приложения -->
     <application
         android:allowBackup="true"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/Theme.Titan2RussianKeyboard">
 
+        <!-- Activity — экран приложения (запускается при открытии) -->
         <activity
             android:name=".MainActivity"
             android:exported="true">
+            <!-- MAIN + LAUNCHER — приложение появляется в лаунчере -->
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
 
+        <!-- BroadcastReceiver — приёмник системных запросов раскладок -->
         <receiver
             android:name=".KeyboardLayoutProviderReceiver"
             android:exported="true"
             android:label="@string/app_name">
+            <!-- QUERY_KEYBOARD_LAYOUTS — система запрашивает доступные раскладки -->
             <intent-filter>
                 <action android:name="android.hardware.input.action.QUERY_KEYBOARD_LAYOUTS" />
             </intent-filter>
+            <!-- Ссылка на XML-файл со списком раскладок -->
             <meta-data
                 android:name="android.hardware.input.metadata.KEYBOARD_LAYOUTS"
                 android:resource="@xml/keyboard_layouts" />

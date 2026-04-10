@@ -1,4 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--
+    XML-шаблон главного экрана приложения.
+    Описывает визуальное расположение элементов на экране.
+-->
+<!-- LinearLayout — контейнер, располагающий элементы вертикально -->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -6,6 +11,7 @@
     android:gravity="center"
     android:padding="24dp">
 
+    <!-- TextView — текстовое поле для отображения инструкции -->
     <TextView
         android:id="@+id/info_text"
         android:layout_width="match_parent"

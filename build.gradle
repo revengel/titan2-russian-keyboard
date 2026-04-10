@@ -1,5 +1,15 @@
-// Top-level build file where you can add configuration options common to all sub-projects/modules.
+// ========================================
+// Главный файл сборки (build.gradle)
+// ========================================
+//
+// Корневой файл Gradle-сборки.
+// Здесь объявляются плагины, общие для всех модулей.
+// apply false — плагин применяется только внутри модулей.
+// ========================================
+
 plugins {
+    // Плагин Android-приложения, версия 8.9.0
     id 'com.android.application' version '8.9.0' apply false
+    // Плагин Kotlin для Android, версия 2.1.0
     id 'org.jetbrains.kotlin.android' version '2.1.0' apply false
 }

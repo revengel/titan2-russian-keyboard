@@ -1,5 +1,14 @@
+# ========================================
+# GitHub Actions — автоматическая сборка APK
+# ========================================
+#
+# При push, pull request или создании релиза
+# GitHub автоматически запускает этот workflow.
+# ========================================
+
 name: Build Android APK
 
+# События, запускающие workflow
 on:
   push:
     branches: [ main, master ]
@@ -9,6 +18,7 @@ on:
     types: [ published ]
 
 jobs:
+  # Job 1: Сборка APK
   build:
     name: Build APK
     runs-on: ubuntu-latest
@@ -16,43 +26,47 @@ jobs:
       contents: read
 
     steps:
+      # Клонирование репозитория
       - name: Checkout code
         uses: actions/checkout@v5
 
-      - name: Set up JDK 21
-        uses: actions/setup-java@v5
+      # Установка JDK 21 и Gradle
+      - name: Set up Gradle
+        uses: gradle/actions/setup-gradle@v4
         with:
           java-version: '21'
           distribution: 'temurin'
-          cache: gradle
 
-      - name: Grant execute permission for gradlew
-        run: chmod +x gradlew
-
+      # Сборка релизного APK
       - name: Build with Gradle
-        run: ./gradlew assembleRelease
+        run: gradle assembleRelease
 
+      # Сохранение APK как артефакт (доступен в Actions)
       - name: Upload APK artifact
         uses: actions/upload-artifact@v5
         with:
           name: app-release
           path: app/build/outputs/apk/release/*.apk
 
+  # Job 2: Загрузка APK в релиз GitHub
   release:
     name: Upload to Release
     needs: build
     runs-on: ubuntu-latest
+    # Запускается только при создании релиза
     if: github.event_name == 'release'
     permissions:
       contents: write
 
     steps:
+      # Скачивание собранного APK
       - name: Download APK
         uses: actions/download-artifact@v5
         with:
           name: app-release
           path: apk/
 
+      # Прикрепление APK к релизу на GitHub
       - name: Upload APK to release
         uses: softprops/action-gh-release@v2
         with:

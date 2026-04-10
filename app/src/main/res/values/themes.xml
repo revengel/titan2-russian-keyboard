@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--
+    Темы приложения (themes.xml)
+    Описывает визуальный стиль всего приложения.
+-->
 <resources xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Тема приложения: Material 3, светлая, без панели действий -->
     <style name="Theme.Titan2RussianKeyboard" parent="Theme.Material3.Light.NoActionBar">
+        <!-- Прозрачная строка состояния -->
         <item name="android:statusBarColor">@android:color/transparent</item>
     </style>
 </resources>

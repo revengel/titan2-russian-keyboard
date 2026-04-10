@@ -1,12 +1,23 @@
+// ========================================
+// Настройки проекта (settings.gradle)
+// ========================================
+//
+// Определяет, какие модули включены в проект,
+// и откуда загружать плагины и зависимости.
+// ========================================
+
+// Настройки для поиска плагинов Gradle
 pluginManagement {
     repositories {
-        google()
-        mavenCentral()
-        gradlePluginPortal()
+        google()           // Репозиторий Google (Android-плагины)
+        mavenCentral()     // Центральный репозиторий Maven
+        gradlePluginPortal // Портал плагинов Gradle
     }
 }
 
+// Управление репозиториями зависимостей
 dependencyResolutionManagement {
+    // Запрещаем модулям указывать собственные репозитории
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories {
         google()
@@ -14,5 +25,7 @@ dependencyResolutionManagement {
     }
 }
 
+// Имя корневого проекта
 rootProject.name = "titan2-russian-keyboard"
+// Подключаем модуль app
 include ':app'

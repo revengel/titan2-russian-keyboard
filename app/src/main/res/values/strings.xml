@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--
+    Строковые ресурсы (strings.xml)
+    Все тексты приложения хранятся здесь для удобства локализации.
+-->
 <resources>
+    <!-- Название приложения (отображается в лаунчере и настройках) -->
     <string name="app_name">Titan2 Russian Keyboard</string>
+    <!-- Название русской раскладки ЙЦУКЕН (в настройках клавиатуры) -->
     <string name="layout_russian">Russian (ЙЦУКЕН)</string>
+    <!-- Название транслит-раскладки (в настройках клавиатуры) -->
     <string name="layout_russian_translit">Russian (Translit)</string>
 </resources>

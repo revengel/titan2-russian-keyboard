@@ -1,17 +1,33 @@
+// Объявляем пакет приложения
 package com.titan2.russiankeyboard
 
+// BroadcastReceiver — класс для получения системных широковещательных сообщений
 import android.content.BroadcastReceiver
+// Context — доступ к системным сервисам Android
 import android.content.Context
+// Intent — сообщение, которое отправляется системой
 import android.content.Intent
 
 /**
- * Receiver for QUERY_KEYBOARD_LAYOUTS intent.
- * System reads meta-data from manifest to discover keyboard layouts.
- * No runtime logic needed — just registration.
+ * Приёмник системного запроса QUERY_KEYBOARD_LAYOUTS.
+ *
+ * Когда пользователь подключает физическую клавиатуру,
+ * система Android отправляет этот Intent. Android читает
+ * meta-data из AndroidManifest.xml и находит список
+ * раскладок, описанных в XML-файле (res/xml/keyboard_layouts.xml).
+ *
+ * Логика в onReceive() не нужна — система автоматически
+ * читает мета-данные из манифеста.
  */
 class KeyboardLayoutProviderReceiver : BroadcastReceiver() {
+
+    /**
+     * Вызывается при получении широковещательного сообщения.
+     * В данном случае просто заглушка — Android сам читает
+     * meta-data из манифеста, не вызывая этот метод.
+     */
     override fun onReceive(context: Context, intent: Intent) {
-        // System reads meta-data from manifest automatically.
-        // This method is called but doesn't need to do anything.
+        // Система автоматически читает meta-data из манифеста.
+        // Этот метод вызывается, но не требует действий.
     }
 }

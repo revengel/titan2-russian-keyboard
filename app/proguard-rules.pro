@@ -1,11 +1,15 @@
-# Add project specific ProGuard rules here.
-# By default, the flags in this file are appended to flags specified
-# in ${sdk.dir}/tools/proguard/proguard-android.txt
+# ========================================
+# Правила ProGuard (proguard-rules.pro)
+# ========================================
+#
+# ProGuard — инструмент обфускации и уменьшения кода.
+# Эти правила указывают, какие классы НЕ обфусцировать.
+# ========================================
 
-# Keep model classes
+# Сохранять аннотации и сигнатуры (нужны для сериализации)
 -keepattributes *Annotation*,Signature,InnerClasses,EnclosingMethod
 
-# Keep native methods
+# Сохранять native-методы (вызываются из C/C++)
 -keepclasseswithmembernames,includedescriptorclasses class * {
     native <methods>;
 }
