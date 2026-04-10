@@ -30,9 +30,9 @@ android {
         // Целевая версия Android (оптимизация под Android 14)
         targetSdk 34
         // Внутренний номер версии (увеличивается при каждом релизе)
-        versionCode 1
+        versionCode 2
         // Видимое имя версии (семантическое версионирование)
-        versionName "0.1.0"
+        versionName "0.1.1"
     }
 
     // Настройки типов сборки (debug / release)
@@ -41,6 +41,10 @@ android {
             // minifyEnabled = false — отключение обфускации (ProGuard)
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+
+            // Подписываем debug-ключом для установки без keystore
+            // Для публикации в Google Play нужно заменить на собственный keystore
+            signingConfig signingConfigs.debug
         }
     }
 
