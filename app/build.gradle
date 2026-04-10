@@ -54,6 +54,14 @@ android {
     kotlinOptions {
         jvmTarget = '21'
     }
+
+    // Переименование APK-файла при сборке
+    // Формат: Titan2RussianKeyboard-<версия>-release.apk
+    applicationVariants.all { variant ->
+        variant.outputs.all {
+            outputFileName = "Titan2RussianKeyboard-${defaultConfig.versionName}-release.apk"
+        }
+    }
 }
 
 // Зависимости проекта (библиотеки)
