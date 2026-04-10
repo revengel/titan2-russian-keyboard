@@ -9,9 +9,9 @@
 // Настройки для поиска плагинов Gradle
 pluginManagement {
     repositories {
-        google()           // Репозиторий Google (Android-плагины)
-        mavenCentral()     // Центральный репозиторий Maven
-        gradlePluginPortal // Портал плагинов Gradle
+        google()
+        mavenCentral()
+        gradlePluginPortal()
     }
 }
 
