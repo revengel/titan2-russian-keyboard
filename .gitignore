@@ -1,1 +1,7 @@
-/.qwen
+.gradle/
+build/
+*.iml
+/.idea/
+/local.properties
+/app/build/
+.qwen/

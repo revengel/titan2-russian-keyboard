@@ -6,7 +6,7 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/Theme.Titan2RussianKeyboard">
-        
+
         <activity
             android:name=".MainActivity"
             android:exported="true">
@@ -16,9 +16,17 @@
             </intent-filter>
         </activity>
 
-        <meta-data
-            android:name="android.hardware.keyboard.defaultlayout"
-            android:resource="@xml/keyboard_layouts" />
+        <receiver
+            android:name=".KeyboardLayoutProviderReceiver"
+            android:exported="true"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.hardware.input.action.QUERY_KEYBOARD_LAYOUTS" />
+            </intent-filter>
+            <meta-data
+                android:name="android.hardware.input.metadata.KEYBOARD_LAYOUTS"
+                android:resource="@xml/keyboard_layouts" />
+        </receiver>
     </application>
 
 </manifest>

@@ -1,7 +1,6 @@
 package com.titan2.russiankeyboard
 
 import android.os.Bundle
-import android.provider.Settings
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 
@@ -14,11 +13,16 @@ class MainActivity : AppCompatActivity() {
         textView.text = """
             Titan2 Russian Keyboard
             
-            Установите раскладку клавиатуры:
-            1. Откройте Настройки → Система → Язык и ввод
-            2. Выберите Физическая клавиатура
-            3. Выберите Titan2 Keyboard
-            4. Выберите раскладку: Russian (Cyrillic) или Russian (Translit)
+            Раскладки установлены!
+            
+            Как использовать:
+            1. Подключите физическую клавиатуру
+            2. Откройте Настройки → Система → Язык и ввод
+            3. Выберите Физическая клавиатура
+            4. Выберите вашу клавиатуру
+            5. Выберите раскладку:
+               • Russian (Standard ЙЦУКЕН)
+               • Russian (Translit)
         """.trimIndent()
     }
 }

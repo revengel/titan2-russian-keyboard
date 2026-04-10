@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Titan2 Russian Keyboard</string>
-    <string name="keyboard_russian">Russian (Cyrillic)</string>
-    <string name="keyboard_russian_translit">Russian (Translit)</string>
+    <string name="layout_russian">Russian (ЙЦУКЕН)</string>
+    <string name="layout_russian_translit">Russian (Translit)</string>
 </resources>
