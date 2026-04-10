@@ -9,10 +9,19 @@
 # type OVERLAY — эта раскладка дополняет стандартную,
 # заменяя только нужные клавиши.
 #
-# Каждый блок key описывает:
-#   label  — символ, отображаемый на клавише
-#   base   — символ без модификаторов
-#   shift, capslock — символ с Shift или CapsLock
+# Модификаторы:
+#   base           — без модификаторов
+#   shift, capslock — с Shift или CapsLock
+#   alt            — с Alt (первый доп. символ)
+#   altgr          — с правым Alt (второй доп. символ)
+#
+# Multi-tap из Pastiera реализован через Alt:
+#   W  (ш): Alt → щ
+#   E  (е): Alt → э, AltGr → ё
+#   U  (у): Alt → ю
+#   I  (и): Alt → й
+#   J  (ь): Alt → ъ
+#   Z  (ж): Alt → з
 #
 # Источник: Pastiera — russian_translit.json
 # ========================================
@@ -26,18 +35,24 @@ key 16 {
     shift, capslock:                    'Я'
 }
 
-# W -> ш (multi-tap: ш -> щ)
+# W -> ш, Alt → щ
 key 17 {
     label:                              'ш'
     base:                               'ш'
     shift, capslock:                    'Ш'
+    alt:                                'щ'
+    alt, shift:                         'Щ'
 }
 
-# E -> е (multi-tap: е -> э -> ё)
+# E -> е, Alt → э, AltGr → ё
 key 18 {
     label:                              'е'
     base:                               'е'
     shift, capslock:                    'Е'
+    alt:                                'э'
+    alt, shift:                         'Э'
+    altgr:                              'ё'
+    altgr, shift:                       'Ё'
 }
 
 # R -> р
@@ -61,18 +76,22 @@ key 21 {
     shift, capslock:                    'Ы'
 }
 
-# U -> у (multi-tap: у -> ю)
+# U -> у, Alt → ю
 key 22 {
     label:                              'у'
     base:                               'у'
     shift, capslock:                    'У'
+    alt:                                'ю'
+    alt, shift:                         'Ю'
 }
 
-# I -> и (multi-tap: и -> й)
+# I -> и, Alt → й
 key 23 {
     label:                              'и'
     base:                               'и'
     shift, capslock:                    'И'
+    alt:                                'й'
+    alt, shift:                         'Й'
 }
 
 # O -> о
@@ -131,11 +150,13 @@ key 35 {
     shift, capslock:                    'Ч'
 }
 
-# J -> ь (multi-tap: ь -> ъ)
+# J -> ь, Alt → ъ
 key 36 {
     label:                              'ь'
     base:                               'ь'
     shift, capslock:                    'Ь'
+    alt:                                'ъ'
+    alt, shift:                         'Ъ'
 }
 
 # K -> к
@@ -152,11 +173,13 @@ key 38 {
     shift, capslock:                    'Л'
 }
 
-# Z -> ж (multi-tap: ж -> з)
+# Z -> ж, Alt → з
 key 44 {
     label:                              'ж'
     base:                               'ж'
     shift, capslock:                    'Ж'
+    alt:                                'з'
+    alt, shift:                         'З'
 }
 
 # X -> х
