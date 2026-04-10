@@ -1,0 +1,255 @@
+# Titan2 Russian Keyboard Character Map (Cyrillic)
+# Russian ЙЦУКЕН layout for physical keyboard
+
+type OVERLAY
+
+# Number row (unchanged)
+key 2 {
+    label:                              '1'
+    base:                               '1'
+}
+
+key 3 {
+    label:                              '2'
+    base:                               '2'
+}
+
+key 4 {
+    label:                              '3'
+    base:                               '3'
+}
+
+key 5 {
+    label:                              '4'
+    base:                               '4'
+}
+
+key 6 {
+    label:                              '5'
+    base:                               '5'
+}
+
+key 7 {
+    label:                              '6'
+    base:                               '6'
+}
+
+key 8 {
+    label:                              '7'
+    base:                               '7'
+}
+
+key 9 {
+    label:                              '8'
+    base:                               '8'
+}
+
+key 10 {
+    label:                              '9'
+    base:                               '9'
+}
+
+key 11 {
+    label:                              '0'
+    base:                               '0'
+}
+
+# QWERTY row -> ЙЦУКЕН
+key 16 {
+    label:                              'й'
+    base:                               'й'
+    shift, capslock:                    'Й'
+}
+
+key 17 {
+    label:                              'ц'
+    base:                               'ц'
+    shift, capslock:                    'Ц'
+}
+
+key 18 {
+    label:                              'у'
+    base:                               'у'
+    shift, capslock:                    'У'
+}
+
+key 19 {
+    label:                              'к'
+    base:                               'к'
+    shift, capslock:                    'К'
+}
+
+key 20 {
+    label:                              'е'
+    base:                               'е'
+    shift, capslock:                    'Е'
+}
+
+key 21 {
+    label:                              'н'
+    base:                               'н'
+    shift, capslock:                    'Н'
+}
+
+key 22 {
+    label:                              'г'
+    base:                               'г'
+    shift, capslock:                    'Г'
+}
+
+key 23 {
+    label:                              'ш'
+    base:                               'ш'
+    shift, capslock:                    'Ш'
+}
+
+key 24 {
+    label:                              'щ'
+    base:                               'щ'
+    shift, capslock:                    'Щ'
+}
+
+key 25 {
+    label:                              'з'
+    base:                               'з'
+    shift, capslock:                    'З'
+}
+
+key 26 {
+    label:                              'х'
+    base:                               'х'
+    shift, capslock:                    'Х'
+}
+
+key 27 {
+    label:                              'ъ'
+    base:                               'ъ'
+    shift, capslock:                    'Ъ'
+}
+
+# ASDFG row -> ФЫВАП
+key 30 {
+    label:                              'ф'
+    base:                               'ф'
+    shift, capslock:                    'Ф'
+}
+
+key 31 {
+    label:                              'ы'
+    base:                               'ы'
+    shift, capslock:                    'Ы'
+}
+
+key 32 {
+    label:                              'в'
+    base:                               'в'
+    shift, capslock:                    'В'
+}
+
+key 33 {
+    label:                              'а'
+    base:                               'а'
+    shift, capslock:                    'А'
+}
+
+key 34 {
+    label:                              'п'
+    base:                               'п'
+    shift, capslock:                    'П'
+}
+
+key 35 {
+    label:                              'р'
+    base:                               'р'
+    shift, capslock:                    'Р'
+}
+
+key 36 {
+    label:                              'о'
+    base:                               'о'
+    shift, capslock:                    'О'
+}
+
+key 37 {
+    label:                              'л'
+    base:                               'л'
+    shift, capslock:                    'Л'
+}
+
+key 38 {
+    label:                              'д'
+    base:                               'д'
+    shift, capslock:                    'Д'
+}
+
+key 39 {
+    label:                              'ж'
+    base:                               'ж'
+    shift, capslock:                    'Ж'
+}
+
+key 40 {
+    label:                              'э'
+    base:                               'э'
+    shift, capslock:                    'Э'
+}
+
+# ZXCVB row -> ЯЧСМИ
+key 44 {
+    label:                              'я'
+    base:                               'я'
+    shift, capslock:                    'Я'
+}
+
+key 45 {
+    label:                              'ч'
+    base:                               'ч'
+    shift, capslock:                    'Ч'
+}
+
+key 46 {
+    label:                              'с'
+    base:                               'с'
+    shift, capslock:                    'С'
+}
+
+key 47 {
+    label:                              'м'
+    base:                               'м'
+    shift, capslock:                    'М'
+}
+
+key 48 {
+    label:                              'и'
+    base:                               'и'
+    shift, capslock:                    'И'
+}
+
+key 49 {
+    label:                              'т'
+    base:                               'т'
+    shift, capslock:                    'Т'
+}
+
+key 50 {
+    label:                              'ь'
+    base:                               'ь'
+    shift, capslock:                    'Ь'
+}
+
+key 51 {
+    label:                              'б'
+    base:                               'б'
+    shift, capslock:                    'Б'
+}
+
+key 52 {
+    label:                              'ю'
+    base:                               'ю'
+    shift, capslock:                    'Ю'
+}
+
+key 53 {
+    label:                              '.'
+    base:                               '.'
+}

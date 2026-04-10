@@ -1,0 +1,256 @@
+# Titan2 Russian Keyboard Character Map (Translit)
+# Russian Translit layout for physical keyboard (phonetic mapping)
+
+type OVERLAY
+
+# Number row (unchanged)
+key 2 {
+    label:                              '1'
+    base:                               '1'
+}
+
+key 3 {
+    label:                              '2'
+    base:                               '2'
+}
+
+key 4 {
+    label:                              '3'
+    base:                               '3'
+}
+
+key 5 {
+    label:                              '4'
+    base:                               '4'
+}
+
+key 6 {
+    label:                              '5'
+    base:                               '5'
+}
+
+key 7 {
+    label:                              '6'
+    base:                               '6'
+}
+
+key 8 {
+    label:                              '7'
+    base:                               '7'
+}
+
+key 9 {
+    label:                              '8'
+    base:                               '8'
+}
+
+key 10 {
+    label:                              '9'
+    base:                               '9'
+}
+
+key 11 {
+    label:                              '0'
+    base:                               '0'
+}
+
+# QWERTY row -> Translit (Q->Я, W->В, E->Е, R->Р, T->Т, Y->Ы, U->У, I->И, O->О, P->П)
+key 16 {
+    label:                              'я'
+    base:                               'я'
+    shift, capslock:                    'Я'
+}
+
+key 17 {
+    label:                              'в'
+    base:                               'в'
+    shift, capslock:                    'В'
+}
+
+key 18 {
+    label:                              'е'
+    base:                               'е'
+    shift, capslock:                    'Е'
+}
+
+key 19 {
+    label:                              'р'
+    base:                               'р'
+    shift, capslock:                    'Р'
+}
+
+key 20 {
+    label:                              'т'
+    base:                               'т'
+    shift, capslock:                    'Т'
+}
+
+key 21 {
+    label:                              'ы'
+    base:                               'ы'
+    shift, capslock:                    'Ы'
+}
+
+key 22 {
+    label:                              'у'
+    base:                               'у'
+    shift, capslock:                    'У'
+}
+
+key 23 {
+    label:                              'и'
+    base:                               'и'
+    shift, capslock:                    'И'
+}
+
+key 24 {
+    label:                              'о'
+    base:                               'о'
+    shift, capslock:                    'О'
+}
+
+key 25 {
+    label:                              'п'
+    base:                               'п'
+    shift, capslock:                    'П'
+}
+
+key 26 {
+    label:                              '['
+    base:                               '['
+    shift, capslock:                    '{'
+}
+
+key 27 {
+    label:                              ']'
+    base:                               ']'
+    shift, capslock:                    '}'
+}
+
+# ASDFG row -> Translit (A->А, S->С, D->Д, F->Ф, G->Г, H->Х, J->Й, K->К, L->Л)
+key 30 {
+    label:                              'а'
+    base:                               'а'
+    shift, capslock:                    'А'
+}
+
+key 31 {
+    label:                              'с'
+    base:                               'с'
+    shift, capslock:                    'С'
+}
+
+key 32 {
+    label:                              'д'
+    base:                               'д'
+    shift, capslock:                    'Д'
+}
+
+key 33 {
+    label:                              'ф'
+    base:                               'ф'
+    shift, capslock:                    'Ф'
+}
+
+key 34 {
+    label:                              'г'
+    base:                               'г'
+    shift, capslock:                    'Г'
+}
+
+key 35 {
+    label:                              'х'
+    base:                               'х'
+    shift, capslock:                    'Х'
+}
+
+key 36 {
+    label:                              'й'
+    base:                               'й'
+    shift, capslock:                    'Й'
+}
+
+key 37 {
+    label:                              'к'
+    base:                               'к'
+    shift, capslock:                    'К'
+}
+
+key 38 {
+    label:                              'л'
+    base:                               'л'
+    shift, capslock:                    'Л'
+}
+
+key 39 {
+    label:                              ';'
+    base:                               ';'
+    shift, capslock:                    ':'
+}
+
+key 40 {
+    label:                              "'"
+    base:                               "'"
+    shift, capslock:                    '"'
+}
+
+# ZXCVB row -> Translit (Z->З, X->Ь, C->Ц, V->Ж, B->Б, N->Н, M->М)
+key 44 {
+    label:                              'з'
+    base:                               'з'
+    shift, capslock:                    'З'
+}
+
+key 45 {
+    label:                              'ь'
+    base:                               'ь'
+    shift, capslock:                    'Ь'
+}
+
+key 46 {
+    label:                              'ц'
+    base:                               'ц'
+    shift, capslock:                    'Ц'
+}
+
+key 47 {
+    label:                              'ж'
+    base:                               'ж'
+    shift, capslock:                    'Ж'
+}
+
+key 48 {
+    label:                              'б'
+    base:                               'б'
+    shift, capslock:                    'Б'
+}
+
+key 49 {
+    label:                              'н'
+    base:                               'н'
+    shift, capslock:                    'Н'
+}
+
+key 50 {
+    label:                              'м'
+    base:                               'м'
+    shift, capslock:                    'М'
+}
+
+key 51 {
+    label:                              ','
+    base:                               ','
+    shift, capslock:                    '<'
+}
+
+key 52 {
+    label:                              '.'
+    base:                               '.'
+    shift, capslock:                    '>'
+}
+
+key 53 {
+    label:                              '/'
+    base:                               '/'
+    shift, capslock:                    '?'
+}

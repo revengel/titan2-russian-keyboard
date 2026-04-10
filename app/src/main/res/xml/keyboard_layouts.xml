@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<keyboard-layouts xmlns:android="http://schemas.android.com/apk/res/android">
+    <keyboard-layout
+        android:name="keyboard_layout_russian"
+        android:label="@string/keyboard_russian"
+        android:keyboardLayout="@xml/russian_keyboard" />
+    <keyboard-layout
+        android:name="keyboard_layout_russian_translit"
+        android:label="@string/keyboard_russian_translit"
+        android:keyboardLayout="@xml/russian_translit_keyboard" />
+</keyboard-layouts>
