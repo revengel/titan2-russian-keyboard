@@ -30,9 +30,9 @@ android {
         // Целевая версия Android (оптимизация под Android 14)
         targetSdk 34
         // Внутренний номер версии (увеличивается при каждом релизе)
-        versionCode 7
+        versionCode 6
         // Видимое имя версии (семантическое версионирование)
-        versionName "0.1.6"
+        versionName "0.1.5"
     }
 
     // Настройки типов сборки (debug / release)

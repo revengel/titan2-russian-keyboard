@@ -4,9 +4,7 @@
 #
 # Транслит-раскладка — фонетическое соответствие
 # английских клавиш русским буквам.
-# Например: Q→я  W→ш  E→е  R→р  T→т  Y→ы  U→у  I→и  O→о  P→п
-#           A→а  S→с  D→д  F→ф  G→г  H→ч  J→ь  K→к  L→л
-#           Z→ж  X→х  C→ц  V→в  B→б  N→н  M→м
+# Например: Q → Я, W → В, E → Е, R → Р...
 #
 # type OVERLAY — дополняет стандартную, заменяя только нужные клавиши.
 #
@@ -49,13 +47,12 @@ key Q {
 	shift+sym, capslock+sym:	'\u042B'
 }
 
-# W → ш (U+0448) / Ш (U+0428)
+# W → в (U+0432) / В (U+0412)
 key W {
 	label:				'W'
-	base:				'\u0448'
-	shift, capslock:		'\u0428'
-	alt:				'\u0449'
-	alt, shift:			'\u0429'
+	base:				'\u0432'
+	shift, capslock:		'\u0412'
+	alt:				'/'
 	sym:				'\u0448'
 	shift+sym, capslock+sym:	'\u0428'
 }
@@ -89,11 +86,11 @@ key T {
 	shift+sym, capslock+sym:	'\u007B'
 }
 
-# Y → ы (U+044B) / Ы (U+042B)
+# Y → ъ (U+044A) / Ъ (U+042A)
 key Y {
 	label:				'Y'
-	base:				'\u044B'
-	shift, capslock:		'\u042B'
+	base:				'\u044A'
+	shift, capslock:		'\u042A'
 	alt:				'\u0029'
 	sym:				'\u005D'
 	shift+sym, capslock+sym:	'\u007D'
@@ -186,23 +183,22 @@ key G {
 	sym:				'\u003D'
 }
 
-# H → ч (U+0447) / Ч (U+0427)
+# H → х (U+0445) / Х (U+0425)
 key H {
 	label:				'H'
-	base:				'\u0447'
-	shift, capslock:		'\u0427'
+	base:				'\u0445'
+	shift, capslock:		'\u0425'
 	alt:				'#'
 	sym:				'\u0447'
 	shift+sym, capslock+sym:	'\u0427'
 }
 
-# J → ь (U+044C) / Ь (U+042C)
+# J → й (U+0439) / Й (U+0419)
 key J {
 	label:				'J'
-	base:				'\u044C'
-	shift, capslock:		'\u042C'
-	alt:				'\u044A'
-	alt, shift:			'\u042A'
+	base:				'\u0439'
+	shift, capslock:		'\u0419'
+	alt:				'4'
 	sym:				'\u00B1'
 }
 
@@ -228,21 +224,20 @@ key L {
 # Нижний ряд: ZXCVB
 # ========================================
 
-# Z → ж (U+0436) / Ж (U+0416)
+# Z → з (U+0437) / З (U+0417)
 key Z {
 	label:				'Z'
-	base:				'\u0436'
-	shift, capslock:		'\u0416'
-	alt:				'\u0437'
-	alt, shift:			'\u0417'
+	base:				'\u0437'
+	shift, capslock:		'\u0417'
+	alt:				'\u0021'
 	sym:				'\u0024'
 }
 
-# X → х (U+0445) / Х (U+0425)
+# X → ь (U+044C) / Ь (U+042C)
 key X {
 	label:				'X'
-	base:				'\u0445'
-	shift, capslock:		'\u0425'
+	base:				'\u044C'
+	shift, capslock:		'\u042C'
 	alt:				'?'
 	sym:				'\u20AC'
 }
@@ -256,11 +251,11 @@ key C {
 	sym:				'\u007E'
 }
 
-# V → в (U+0432) / В (U+0412)
+# V → ж (U+0436) / Ж (U+0416)
 key V {
 	label:				'V'
-	base:				'\u0432'
-	shift, capslock:		'\u0412'
+	base:				'\u0436'
+	shift, capslock:		'\u0416'
 	alt:				'.'
 	sym:				'\u044D'
 	shift+sym, capslock+sym:	'\u042D'
