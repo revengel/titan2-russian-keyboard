@@ -48,9 +48,21 @@ jobs:
         with:
           gradle-version: '8.13'
 
+      # Декодирование релизного кейстора из секрета
+      - name: Decode release keystore
+        run: |
+          echo "$RELEASE_KEYSTORE" | base64 -d > $GITHUB_WORKSPACE/release.jks
+        env:
+          RELEASE_KEYSTORE: ${{ secrets.RELEASE_KEYSTORE }}
+
       # Сборка релизного APK
       - name: Build with Gradle
         run: gradle assembleRelease
+        env:
+          RELEASE_KEYSTORE_FILE: ${{ github.workspace }}/release.jks
+          RELEASE_KEYSTORE_PASSWORD: ${{ secrets.RELEASE_KEYSTORE_PASSWORD }}
+          RELEASE_KEY_ALIAS: ${{ secrets.RELEASE_KEY_ALIAS }}
+          RELEASE_KEY_PASSWORD: ${{ secrets.RELEASE_KEY_PASSWORD }}
 
       # Сохранение APK как артефакт (доступен в Actions)
       - name: Upload APK artifact

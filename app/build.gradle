@@ -30,21 +30,39 @@ android {
         // Целевая версия Android (оптимизация под Android 14)
         targetSdk 34
         // Внутренний номер версии (увеличивается при каждом релизе)
-        versionCode 8
+        versionCode 9
         // Видимое имя версии (семантическое версионирование)
-        versionName "0.1.7"
+        versionName "0.1.8"
     }
 
     // Настройки типов сборки (debug / release)
+    signingConfigs {
+        release {
+            // Подписываем релизным ключом из переменных окружения (CI)
+            def keystoreFile = System.getenv('RELEASE_KEYSTORE_FILE')
+            if (keystoreFile && new File(keystoreFile).exists()) {
+                storeFile file(keystoreFile)
+                storePassword System.getenv('RELEASE_KEYSTORE_PASSWORD')
+                keyAlias System.getenv('RELEASE_KEY_ALIAS')
+                keyPassword System.getenv('RELEASE_KEY_PASSWORD')
+            } else {
+                // Локальная сборка — fallback на debug-ключ
+                storeFile file('debug.keystore')
+                storePassword 'android'
+                keyAlias 'androiddebugkey'
+                keyPassword 'android'
+            }
+        }
+    }
+
     buildTypes {
         release {
             // minifyEnabled = false — отключение обфускации (ProGuard)
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
 
-            // Подписываем debug-ключом для установки без keystore
-            // Для публикации в Google Play нужно заменить на собственный keystore
-            signingConfig signingConfigs.debug
+            // Подписываем релизным ключом
+            signingConfig signingConfigs.release
         }
     }
 
