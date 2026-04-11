@@ -1,0 +1,271 @@
+# ========================================
+# Карта символов русской клавиатуры (ЙЦУКЕН)
+# ========================================
+#
+# Стандартная русская раскладка ЙЦУКЕН.
+# Q→й  W→ц  E→у  R→к  T→е  Y→н  U→г  I→ш  O→щ  P→з
+# A→ф  S→ы  D→в  F→а  G→п  H→р  J→о  K→л  L→д
+# Z→я  X→ч  C→с  V→м  B→и  N→т  M→ь
+#
+# type OVERLAY — дополняет стандартную, заменяя только нужные клавиши.
+#
+# Модификаторы:
+#   base           — без модификаторов
+#   shift, capslock — с Shift или CapsLock
+#   alt            — с Alt (левый)
+#   sym            — с клавишей Symbol
+#
+# Таблица UTF-8 кодов русских букв:
+#   А U+0410  а U+0430    Б U+0411  б U+0431    В U+0412  в U+0432
+#   Г U+0413  г U+0433    Д U+0414  д U+0434    Е U+0415  е U+0435
+#   Ё U+0401  ё U+0451    Ж U+0416  ж U+0436    З U+0417  з U+0437
+#   И U+0418  и U+0438    Й U+0419  й U+0439    К U+041A  к U+043A
+#   Л U+041B  л U+043B    М U+041C  м U+043C    Н U+041D  н U+043D
+#   О U+041E  о U+043E    П U+041F  п U+043F    Р U+0420  р U+0440
+#   С U+0421  с U+0441    Т U+0422  т U+0442    У U+0423  у U+0443
+#   Ф U+0424  ф U+0444    Х U+0425  х U+0445    Ц U+0426  ц U+0446
+#   Ч U+0427  ч U+0447    Ш U+0428  ш U+0448    Щ U+0429  щ U+0449
+#   Ъ U+042A  ъ U+044A    Ы U+042B  ы U+044B    Ь U+042C  ь U+044C
+#   Э U+042D  э U+044D    Ю U+042E  ю U+044E    Я U+042F  я U+044F
+# ========================================
+
+type OVERLAY
+
+# Клавиша Symbol
+map key 250 SYM
+
+# ========================================
+# Верхний ряд: QWERTY → ЙЦУКЕН
+# ========================================
+
+# Q → й (U+0439) / Й (U+0419)
+key Q {
+	label:					'Q'
+	base:					'\u0439'
+	shift, capslock:		'\u0419'
+	alt: 					'0'
+}
+
+# W → ц (U+0446) / Ц (U+0426)
+key W {
+	label:						'W'
+	base:						'\u0446'
+	shift, capslock:			'\u0426'
+	alt:						'1'
+	sym:						'\u0449'
+	shift+sym, capslock+sym:	'\u0429'
+}
+
+# E → у (U+0443) / У (U+0423)
+key E {
+	label:						'E'
+	base:						'\u0443'
+	shift, capslock:			'\u0423'
+	alt:						'2'
+	sym:						'\u0451'
+	shift+sym, capslock+sym:	'\u0401'
+}
+
+# R → к (U+043A) / К (U+041A)
+key R {
+	label:						'R'
+	base:						'\u043A'
+	shift, capslock:			'\u041A'
+	alt:						'3'
+}
+
+# T → е (U+0435) / Е (U+0415), Sym → э
+key T {
+	label:						'T'
+	base:						'\u0435'
+	shift, capslock:			'\u0415'
+	alt:						'('
+	sym:						'\u044D'
+	shift+sym, capslock+sym:	'\u042D'
+}
+
+# Y → н (U+043D) / Н (U+041D)
+key Y {
+	label:						'Y'
+	base:						'\u043D'
+	shift, capslock:			'\u041D'
+	alt:						')'
+}
+
+# U → г (U+0433) / Г (U+0413)
+key U {
+	label:						'U'
+	base:						'\u0433'
+	shift, capslock:			'\u0413'
+	alt:						'-'
+}
+
+# I → ш (U+0448) / Ш (U+0428)
+key I {
+	label:						'I'
+	base:						'\u0448'
+	shift, capslock:			'\u0428'
+	alt:						'_'
+}
+
+# O → щ (U+0449) / Щ (U+0429)
+key O {
+	label:						'O'
+	base:						'\u0449'
+	shift, capslock:			'\u0429'
+	alt:						'/'
+}
+
+# P → з (U+0437) / З (U+0417), Sym → х
+key P {
+	label:						'P'
+	base:						'\u0437'
+	shift, capslock:			'\u0417'
+	alt:						':'
+	sym:						'\u0445'
+	shift+sym, capslock+sym:	'\u0425'
+}
+
+# ========================================
+# Средний ряд: ASDFG → ФЫВАП
+# ========================================
+
+# A → ф (U+0444) / Ф (U+0424)
+key A {
+	label:						'A'
+	base:						'\u0444'
+	shift, capslock:			'\u0424'
+	alt:						'@'
+}
+
+# S → ы (U+044B) / Ы (U+042B)
+key S {
+	label:						'S'
+	base:						'\u044B'
+	shift, capslock:			'\u042B'
+	alt:						'4'
+}
+
+# D → в (U+0432) / В (U+0412)
+key D {
+	label:						'D'
+	base:						'\u0432'
+	shift, capslock:			'\u0412'
+	alt:						'5'
+}
+
+# F → а (U+0430) / А (U+0410)
+key F {
+	label:						'F'
+	base:						'\u0430'
+	shift, capslock:			'\u0410'
+	alt:						'6'
+}
+
+# G → п (U+043F) / П (U+041F)
+key G {
+	label:						'G'
+	base:						'\u043F'
+	shift, capslock:			'\u041F'
+	alt:						'*'
+}
+
+# H → р (U+0440) / Р (U+0420)
+key H {
+	label:						'H'
+	base:						'\u0440'
+	shift, capslock:			'\u0420'
+	alt:						'#'
+}
+
+# J → о (U+043E) / О (U+041E)
+key J {
+	label:						'J'
+	base:						'\u043E'
+	shift, capslock:			'\u041E'
+	alt:						'+'
+}
+
+# K → л (U+043B) / Л (U+041B)
+key K {
+	label:						'K'
+	base:						'\u043B'
+	shift, capslock:			'\u041B'
+	alt:						'"'
+}
+
+# L → д (U+0434) / Д (U+0414), Sym → ж
+key L {
+	label:						'L'
+	base:						'\u0434'
+	shift, capslock:			'\u0414'
+	alt:						'\''
+	sym:						'\u0436'
+	shift+sym, capslock+sym:	'\u0416'
+}
+
+# ========================================
+# Нижний ряд: ZXCVB → ЯЧСМИ
+# ========================================
+
+# Z → я (U+044F) / Я (U+042F)
+key Z {
+	label:						'Z'
+	base:						'\u044F'
+	shift, capslock:			'\u042F'
+	alt:						'!'
+}
+
+# X → ч (U+0447) / Ч (U+0427)
+key X {
+	label:						'X'
+	base:						'\u0447'
+	shift, capslock:			'\u0427'
+	alt:						'7'
+}
+
+# C → с (U+0441) / С (U+0421)
+key C {
+	label:						'C'
+	base:						'\u0441'
+	shift, capslock:			'\u0421'
+	alt:						'8'
+}
+
+# V → м (U+043C) / М (U+041C)
+key V {
+	label:						'V'
+	base:						'\u043C'
+	shift, capslock:			'\u041C'
+	alt:						'9'
+}
+
+# B → и (U+0438) / И (U+0418), Sym → б
+key B {
+	label:						'B'
+	base:						'\u0438'
+	shift, capslock:			'\u0418'
+	alt:						'.'
+	sym:						'\u0431'
+	shift+sym, capslock+sym:	'\u0411'
+}
+
+# N → т (U+0442) / Т (U+0422), Sym → ю
+key N {
+	label:						'N'
+	base:						'\u0442'
+	shift, capslock:			'\u0422'
+	alt:						','
+	sym:						'\u044E'
+	shift+sym, capslock+sym:	'\u042E'
+}
+
+# M → ь (U+044C) / Ь (U+042C), Sym → ъ
+key M {
+	label:						'M'
+	base:						'\u044C'
+	shift, capslock:			'\u042C'
+	alt:						'?'
+	sym:						'\u044A'
+	shift+sym, capslock+sym:	'\u042A'
+}

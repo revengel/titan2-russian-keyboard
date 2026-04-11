@@ -6,6 +6,8 @@
 <resources>
     <!-- Название приложения (отображается в лаунчере и настройках) -->
     <string name="app_name">Titan2 Russian Keyboard</string>
+    <!-- Название русской раскладки ЙЦУКЕН (в настройках клавиатуры) -->
+    <string name="layout_russian_qwerty">Russian (ЙЦУКЕН)</string>
     <!-- Название транслит-раскладки (в настройках клавиатуры) -->
     <string name="layout_russian_translit">Russian (Translit)</string>
 </resources>
