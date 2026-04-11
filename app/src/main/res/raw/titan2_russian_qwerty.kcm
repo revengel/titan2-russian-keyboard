@@ -52,8 +52,6 @@ key W {
 	base:						'\u0446'
 	shift, capslock:			'\u0426'
 	alt:						'1'
-	sym:						'\u0449'
-	shift+sym, capslock+sym:	'\u0429'
 }
 
 # E → у (U+0443) / У (U+0423)
@@ -62,8 +60,6 @@ key E {
 	base:						'\u0443'
 	shift, capslock:			'\u0423'
 	alt:						'2'
-	sym:						'\u0451'
-	shift+sym, capslock+sym:	'\u0401'
 }
 
 # R → к (U+043A) / К (U+041A)
