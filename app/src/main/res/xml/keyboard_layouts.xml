@@ -5,12 +5,6 @@
     Каждая раскладка ссылается на .kcm-файл в res/raw/.
 -->
 <keyboard-layouts xmlns:android="http://schemas.android.com/apk/res/android">
-    <!-- Стандартная русская раскладка (ЙЦУКЕН) -->
-    <keyboard-layout
-        android:name="keyboard_layout_russian"
-        android:label="@string/layout_russian"
-        android:keyboardLayout="@raw/titan2_russian" />
-
     <!-- Русская транслит-раскладка (фонетическая) -->
     <keyboard-layout
         android:name="keyboard_layout_russian_translit"
