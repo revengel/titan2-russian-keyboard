@@ -42,9 +42,6 @@ key Q {
 	label:				'Q'
 	base:				'\u044F'
 	shift, capslock:		'\u042F'
-	alt:				':'
-	sym:				'\u044B'
-	shift+sym, capslock+sym:	'\u042B'
 }
 
 # W → в (U+0432) / В (U+0412)
