@@ -3,21 +3,155 @@
     XML-шаблон главного экрана приложения.
     Описывает визуальное расположение элементов на экране.
 -->
-<!-- LinearLayout — контейнер, располагающий элементы вертикально -->
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<!-- ScrollView — прокрутка на маленьких экранах -->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:gravity="center"
-    android:padding="24dp">
+    android:fillViewport="true">
 
-    <!-- TextView — текстовое поле для отображения инструкции -->
-    <TextView
-        android:id="@+id/info_text"
+    <!-- LinearLayout — контейнер, располагающий элементы вертикально -->
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="14sp"
-        android:lineSpacingExtra="4dp"
-        android:fontFamily="monospace" />
+        android:orientation="vertical"
+        android:padding="16dp">
 
-</LinearLayout>
+        <!-- Заголовок -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Titan2 Russian Keyboard"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:paddingBottom="8dp" />
+
+        <!-- Инструкция -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Подключите клавиатуру и выберите раскладку Russian (Translit):&#10;Настройки → Язык и ввод → Физическая клавиатура"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:paddingBottom="16dp" />
+
+        <!-- Таблица раскладки: верхний ряд Q-P -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Верхний ряд"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:paddingBottom="4dp" />
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:stretchColumns="0,1,2,3,4,5,6,7,8,9"
+            android:paddingBottom="8dp">
+
+            <TableRow>
+                <TextView android:text="Q\nя" android:gravity="center" android:padding="8dp" android:background="@android:drawable/editbox_background" />
+                <TextView android:text="W\nш" android:gravity="center" android:padding="8dp" android:background="@android:drawable/editbox_background" />
+                <TextView android:text="E\nе" android:gravity="center" android:padding="8dp" android:background="@android:drawable/editbox_background" />
+                <TextView android:text="R\nр" android:gravity="center" android:padding="8dp" android:background="@android:drawable/editbox_background" />
+                <TextView android:text="T\nт" android:gravity="center" android:padding="8dp" android:background="@android:drawable/editbox_background" />
+                <TextView android:text="Y\nы" android:gravity="center" android:padding="8dp" android:background="@android:drawable/editbox_background" />
+                <TextView android:text="U\nу" android:gravity="center" android:padding="8dp" android:background="@android:drawable/editbox_background" />
+                <TextView android:text="I\nи" android:gravity="center" android:padding="8dp" android:background="@android:drawable/editbox_background" />
+                <TextView android:text="O\nо" android:gravity="center" android:padding="8dp" android:background="@android:drawable/editbox_background" />
+                <TextView android:text="P\nп" android:gravity="center" android:padding="8dp" android:background="@android:drawable/editbox_background" />
+            </TableRow>
+        </TableLayout>
+
+        <!-- Средний ряд A-L -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Средний ряд"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:paddingBottom="4dp" />
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:stretchColumns="0,1,2,3,4,5,6,7,8"
+            android:paddingBottom="8dp">
+
+            <TableRow>
+                <TextView android:text="A\nа" android:gravity="center" android:padding="8dp" android:background="@android:drawable/editbox_background" />
+                <TextView android:text="S\nс" android:gravity="center" android:padding="8dp" android:background="@android:drawable/editbox_background" />
+                <TextView android:text="D\nд" android:gravity="center" android:padding="8dp" android:background="@android:drawable/editbox_background" />
+                <TextView android:text="F\nф" android:gravity="center" android:padding="8dp" android:background="@android:drawable/editbox_background" />
+                <TextView android:text="G\nг" android:gravity="center" android:padding="8dp" android:background="@android:drawable/editbox_background" />
+                <TextView android:text="H\nч" android:gravity="center" android:padding="8dp" android:background="@android:drawable/editbox_background" />
+                <TextView android:text="J\nь" android:gravity="center" android:padding="8dp" android:background="@android:drawable/editbox_background" />
+                <TextView android:text="K\nк" android:gravity="center" android:padding="8dp" android:background="@android:drawable/editbox_background" />
+                <TextView android:text="L\nл" android:gravity="center" android:padding="8dp" android:background="@android:drawable/editbox_background" />
+            </TableRow>
+        </TableLayout>
+
+        <!-- Нижний ряд Z-M -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Нижний ряд"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:paddingBottom="4dp" />
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:stretchColumns="0,1,2,3,4,5,6"
+            android:paddingBottom="8dp">
+
+            <TableRow>
+                <TextView android:text="Z\nз" android:gravity="center" android:padding="8dp" android:background="@android:drawable/editbox_background" />
+                <TextView android:text="X\nх" android:gravity="center" android:padding="8dp" android:background="@android:drawable/editbox_background" />
+                <TextView android:text="C\nц" android:gravity="center" android:padding="8dp" android:background="@android:drawable/editbox_background" />
+                <TextView android:text="V\nв" android:gravity="center" android:padding="8dp" android:background="@android:drawable/editbox_background" />
+                <TextView android:text="B\nб" android:gravity="center" android:padding="8dp" android:background="@android:drawable/editbox_background" />
+                <TextView android:text="N\nн" android:gravity="center" android:padding="8dp" android:background="@android:drawable/editbox_background" />
+                <TextView android:text="M\nм" android:gravity="center" android:padding="8dp" android:background="@android:drawable/editbox_background" />
+            </TableRow>
+        </TableLayout>
+
+        <!-- Sym-буквы -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sym — дополнительные буквы"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:paddingTop="8dp"
+            android:paddingBottom="4dp" />
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:stretchColumns="0,1,2,3,4,5"
+            android:paddingBottom="8dp">
+
+            <TableRow>
+                <TextView android:text="W\nщ" android:gravity="center" android:padding="8dp" android:background="@android:drawable/editbox_background" />
+                <TextView android:text="E\nэ" android:gravity="center" android:padding="8dp" android:background="@android:drawable/editbox_background" />
+                <TextView android:text="U\nю" android:gravity="center" android:padding="8dp" android:background="@android:drawable/editbox_background" />
+                <TextView android:text="I\nй" android:gravity="center" android:padding="8dp" android:background="@android:drawable/editbox_background" />
+                <TextView android:text="J\nъ" android:gravity="center" android:padding="8dp" android:background="@android:drawable/editbox_background" />
+                <TextView android:text="Z\nж" android:gravity="center" android:padding="8dp" android:background="@android:drawable/editbox_background" />
+            </TableRow>
+        </TableLayout>
+
+        <!-- Подсказка -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Shift+Sym — заглавные буквы"
+            android:textSize="12sp"
+            android:gravity="center"
+            android:paddingTop="8dp" />
+
+    </LinearLayout>
+</ScrollView>
