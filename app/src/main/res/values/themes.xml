@@ -4,9 +4,9 @@
     Описывает визуальный стиль всего приложения.
 -->
 <resources xmlns:android="http://schemas.android.com/apk/res/android">
-    <!-- Тема приложения: Material 3, светлая, с панелью действий -->
-    <style name="Theme.Titan2RussianKeyboard" parent="Theme.Material3.Light">
-        <!-- Прозрачная строка состояния -->
-        <item name="android:statusBarColor">@android:color/transparent</item>
+    <!-- Тема приложения: автоматически следует системной (светлая/тёмная) -->
+    <style name="Theme.Titan2RussianKeyboard" parent="Theme.Material3.DayNight">
+        <!-- Цвет строки состояния -->
+        <item name="android:statusBarColor">?attr/colorSurface</item>
     </style>
 </resources>
