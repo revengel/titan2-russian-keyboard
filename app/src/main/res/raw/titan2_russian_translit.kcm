@@ -40,8 +40,9 @@ map key 250 SYM
 # Q → я (U+044F) / Я (U+042F)
 key Q {
 	label:				'Q'
-	base:				'я'
-	shift, capslock:	'Я'
+	base:				'\u044F'
+	shift, capslock:	'\u042F'
+	alt: 				'0'
 }
 
 # W → в (U+0432) / В (U+0412)
