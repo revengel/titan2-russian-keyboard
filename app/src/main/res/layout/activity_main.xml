@@ -30,7 +30,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Выберите раскладку:\nНастройки → Язык и ввод → Физическая клавиатура"
+            android:text="Настройки → Система → Клавиатура&#10;&#10;1. Выберите Gboard основной&#10;2. Физическая клавиатура → Titan key&#10;3. русский (Россия) → Russian (Translit)"
             android:textSize="14sp"
             android:gravity="center"
             android:paddingBottom="12dp" />
