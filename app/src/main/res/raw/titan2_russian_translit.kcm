@@ -28,7 +28,7 @@
 #   Э U+042D  э U+044D    Ю U+042E  ю U+044E    Я U+042F  я U+044F
 # ========================================
 
-type OVERLAY
+type ALPHA
 
 # Клавиша Symbol
 map key 250 SYM
